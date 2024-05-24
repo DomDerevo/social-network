@@ -5,13 +5,15 @@ import Message from "./message/Message";
 function Messages() {
     return (
         <div className="messages">
-            <Message />
-            <p></p>
+            <Message name='Вася' text='Привет!' />
+            <Message name='Андрей' text='Здрасьте!' />
+            <Message name='Лёха' text='чёкаво!' />
             <input type="text" />
-            <p></p>
             <button>send</button>
         </div>
     )
 }
 
 export default Messages;
+
+// ДЗ добавить больше сообщеyий в message (может добавить props для имени и сообщения) и починить grid

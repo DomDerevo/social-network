@@ -2,7 +2,6 @@
     display: grid;
     grid-template-columns: 3fr 9fr;
     gap: 10px;
-
 }
 
 .me img{
@@ -23,5 +22,4 @@
 
 .post{
     margin: 20px 0;
-
 }
