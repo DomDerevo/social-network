@@ -18,9 +18,9 @@ function App(props) {
         <Navbar />
         <div className="wrapper-content">
           <Routes>
-            <Route path='/' element={<Profile postList={props.postList} />}/>
-            <Route path='/profile' element={<Profile  postList={props.postList}/>} />
-            <Route path='/messages' element={<Messages messageList={props.messageList}/>} />
+            <Route path='/' element={<Profile postList={props.state.profilePage.postList} />}/>
+            <Route path='/profile' element={<Profile  postList={props.state.profilePage.postList}/>} />
+            <Route path='/messages' element={<Messages messageList={props.state.dialoguePage.messageList}/>} />
           </Routes>
         </div>
       </BrowserRouter >
