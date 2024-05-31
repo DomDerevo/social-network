@@ -1,5 +1,7 @@
 // ДЗ https://ru.reactjs.org/docs/components-and-props.html
 
+// В компоненте posts вынести данные в сторону в виде массива объектов. С помощью map() отрисовать все посты сразу (как делали в Vtssages  спомощью списка и map)
+
 
 import './App.css';
 import Header from './components/header/Header';
@@ -8,7 +10,7 @@ import Profile from './components/profile/Profile';
 import Messages from './components/messages/Messages';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-function App() {
+function App(props) {
   return (
     <div className="wrapper">
       <BrowserRouter >
@@ -16,9 +18,9 @@ function App() {
         <Navbar />
         <div className="wrapper-content">
           <Routes>
-            <Route path='/' element={<Profile />}/>
-            <Route path='/profile' element={<Profile />} />
-            <Route path='/messages' element={<Messages />} />
+            <Route path='/' element={<Profile postList={props.postList} />}/>
+            <Route path='/profile' element={<Profile  postList={props.postList}/>} />
+            <Route path='/messages' element={<Messages messageList={props.messageList}/>} />
           </Routes>
         </div>
       </BrowserRouter >
