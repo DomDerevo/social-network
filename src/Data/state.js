@@ -1,3 +1,5 @@
+import rerenderTree from "../render"
+
 
 let state = {
     profilePage: {
@@ -28,12 +30,12 @@ let state = {
 export let addPost = (postText)=>{
     let newPost = {
         message: postText,
-        id : 5, 
+        id : state.profilePage.postList.length+1, 
         likes:0
     }
 
     state.profilePage.postList.push(newPost)
-    console.log(state);
+    rerenderTree(state)
 }
 
 export let addMessage = (messageText) =>{
@@ -44,7 +46,7 @@ export let addMessage = (messageText) =>{
     }
 
     state.dialoguePage.messageList.push(newMessage)
-    console.log(state);
+    rerenderTree(state)
 }
 
 export default state

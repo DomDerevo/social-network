@@ -1,8 +1,9 @@
 // ДЗ https://ru.reactjs.org/docs/components-and-props.html
 
-
-
 // https://docs.google.com/document/d/e/2PACX-1vT3BLTQ0vVYCBbaHQnGHGDPJdRv0l0NoWTtC_p5hJIr-vMwRUKpl449wN4Z_xBk86dX_2aB9qqtCFqG/pub
+
+// https://ru.wikipedia.org/wiki/Flux-%D0%B0%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0
+
 
 
 import './App.css';
