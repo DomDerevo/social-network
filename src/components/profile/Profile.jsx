@@ -11,7 +11,7 @@ function Profile(props) {
         <img src={ava} alt="ElonMask" />
         <p>Elon Mask</p>
       </div>
-      <Posts postList={props.postList} />
+      <Posts postList={props.postList} addPost={props.addPost} />
     </div>
   )
 }
