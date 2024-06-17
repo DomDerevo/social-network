@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let car = {
+            label: 'Tesla',
+            model: 'X',
+            color: 'black',
+            sayColor() {
+                console.log(this.color);
+            }
+        }
+        car.sayColor()
+
+        let page = {
+            _content: '',
+            setContent(content){
+                this._content = content
+                
+            },
+            getContent(){
+                return(
+                    document.querySelector('body').innerHTML= this._content
+                )
+            }
+        }
+        page.setContent('1234567')
+        page.getContent()
+    </script>
+</body>
+
+</html>

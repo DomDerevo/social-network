@@ -22,9 +22,9 @@ function App(props) {
         <Navbar friends={props.state.Navbar.friends}/>
         <div className="wrapper-content">
           <Routes>
-            <Route path='/' element={<Profile postList={props.state.profilePage.postList} addPost = {props.addPost} />}/>
-            <Route path='/profile' element={<Profile  postList={props.state.profilePage.postList} addPost = {props.addPost} />} />
-            <Route path='/messages' element={<Messages messageList={props.state.dialoguePage.messageList} addMessage={props.addMessage} />} />
+            <Route path='/' element={<Profile postList={props.state.profilePage.postList} addPost = {props.addPost} newPostText={props.state.profilePage.newPostText} onPostChange={props.onPostChange} />}/>
+            <Route path='/profile' element={<Profile  postList={props.state.profilePage.postList} addPost = {props.addPost} newPostText={props.state.profilePage.newPostText} onPostChange={props.onPostChange} />} />
+            <Route path='/messages' element={<Messages messageList={props.state.dialoguePage.messageList} addMessage={props.addMessage} newMessageText={props.state.dialoguePage.newMessageText} onMessageChange = {props.onMessageChange}/>} />
           </Routes>
         </div>
       </BrowserRouter >
