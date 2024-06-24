@@ -1,16 +1,19 @@
 import React from "react";
 import './messages.css'
 import Message from "./message/Message";
+import { addMessageAC, onMessageChangeAC } from "../../Data/state";
 
 let messageText = React.createRef()
 
 function Messages(props) {
     console.log(props);
     let addMessage = ()=>{
-        props.addMessage(messageText.current.value)
+        // props.addMessage(messageText.current.value)
+        props.dispatch(addMessageAC())
     }
     let onMessageChange = ()=>{
-        props.onMessageChange(messageText.current.value)
+        // props.onMessageChange(messageText.current.value)
+        props.dispatch(onMessageChangeAC(messageText.current.value))
     }
     return (
         <div className="messages">
